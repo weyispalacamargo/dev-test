@@ -5,6 +5,10 @@
 
 function formatDate(userDate) {
   // format from M/D/YYYY to YYYYMMDD
+  let dataBarrasRemovidas = userDate.split("/");
+  //let dataOrdenada = dataBarrasRemovidas[2]+dataBarrasRemovidas[0]+dataBarrasRemovidas[1]
+  let dataOrdenada = `${dataBarrasRemovidas[2]}${dataBarrasRemovidas[0]}${dataBarrasRemovidas[1]}`
+  return dataOrdenada;
 }
 
 console.log(formatDate("12/31/2014"));

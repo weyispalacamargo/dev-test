@@ -29,6 +29,12 @@
 
 function setup () {
   // Write your code here.
+  const botaoRemove = document.querySelectorAll('.remove');
+  botaoRemove.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      this.parentElement.remove();
+    });
+  });
 }
 
 // Example case. 
