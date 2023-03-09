@@ -10,3 +10,7 @@ TABLE cats
 
 
 Escreva uma consulta que selecione todos os nomes de animais distintos.
+
+SELECT DISTINCT dogs.name, cats.name
+FROM dogs
+JOIN cats ON dogs.name = cats.name;
