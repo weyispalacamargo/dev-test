@@ -19,8 +19,9 @@ class Palindrome
 {
     public static function isPalindrome($word)
     {
-        return NULL;
+        $word = strtolower($word);
+        return $word === strrev($word);
     }
 }
 
-echo Palindrome::isPalindrome('Deleveled');
+echo Palindrome::isPalindrome('Deleveled') ? "Verdadeiro" : "Falso";

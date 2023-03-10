@@ -55,7 +55,14 @@ class LeagueTable
 	
 	public function playerRank($rank)
     {
-        return NULL;
+        $players = $this -> standings;
+        array_multisort(
+            array_column($players, 'games_played'), SORT_ASC,
+            array_column($players, 'score'), SORT_ASC,
+            $players
+        );
+        $p = array_keys($players)[$rank - 1];
+        return $p;
 	}
 }
       
