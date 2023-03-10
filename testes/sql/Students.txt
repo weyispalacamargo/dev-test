@@ -8,4 +8,4 @@ TABLE students
 
 SELECT COUNT(*)
 FROM students
-WHERE firstName = John;
+WHERE firstName = "John";
